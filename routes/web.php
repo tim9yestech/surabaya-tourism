@@ -14,5 +14,29 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('beranda');
+});
+
+Route::get('/destinasi', function () {
+    return view('destinasi', [
+        "nama" => "Nurul Maghfiroh",
+        "email" => "nurma41299@gmail.com",
+        "gambar" => "https://tourism.surabaya.go.id/storage/tour/1675736393_1.jpg"
+    ]);
+});
+
+Route::get('/produk-umkm', function () {
+    return view('produk-umkm');
+});
+
+Route::get('/produk', function () {
+    return view('produk');
+});
+
+Route::get('/admin', function () {
+    return 'Halaman Admin Tourism Surabaya';
+});
+
+Route::get('/admin-panel', function () {
+    return 'Halaman Admin Panel Tourism Surabaya';
 });
